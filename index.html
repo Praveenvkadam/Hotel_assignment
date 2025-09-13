@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="first.css">
+  <title>Responsive Page</title>
+</head>
+<body>
+    <!-- Component 1 -->
+  <div>
+    <nav class="navbar">
+      <ul id="nav-links">
+        <li>Home</li>
+        <li>Order</li>
+        <li>Food</li>
+        <li>Restaurant</li>
+        <li>Testimonials</li>
+        <li>Contact Us</li>
+        <li><img id="menu" src="images/menu-bar.png" alt="Menu Icon" height="40" width="40"></li>
+      </ul>
+      <img id="menu-btn" src="images/menu-bar.png" alt="Menu Icon" height="40" width="40">
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="right-container">
+      <img src="images/pexels-robin-stickel-70497.jpg" alt="Food Image">
+    </div>
+
+    <div class="left-container">
+      <h1>Lorem ipsum</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vivamus id est vitae dolor rhoncus tristique. 
+        Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. 
+        Donec dictum luctus quam ut tristique. Curabitur nec faucibus purus. 
+        Quisque congue sem nec justo mollis, in tincidunt erat pretium. 
+        Sed pulvinar, massa ac porta viverra.
+      </p>
+      <button>Click Me</button>
+    </div>
+  </div>
+
+  <!-- Component 2 -->
+  <div class="container-2">
+
+    <div class="left-box">
+
+        <div class="duble-img">
+            <img src="images/pexels-rachel-claire-6752433.jpg" alt="" height="230px" width="200px">
+            <img src="images/pexels-eva-bronzini-6141651.jpg" alt="" height="230px" width="200px">
+        </div>
+
+        <div class="single-img">
+            <img src="images/pexels-mister-mister-3434523.jpg" alt="" height="480px" width="250px">
+        </div>
+
+    </div>
+
+    <div class="right-box">
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum adipiscing</p>
+
+        <div class="click">
+            <p>Click</p>
+            <img src="images/icons8-arrow-30.png" alt="" height="20px" width="20px">
+        </div>
+
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    let isOpen = false;
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        menuBtn.src = "images/close.png";
+      } else {
+        menuBtn.src = "images/menu-bar.png";
+      }
+    });
+  </script>
+</body>
+</html>
